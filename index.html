@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interpretability Explainers — Imran Khan</title>
+  <meta name="description" content="Small, self-contained interactive guides to mechanistic interpretability." />
+  <meta name="author" content="Imran Khan" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#1a1a1a;
+      --ink-soft:#3a3a3a;
+      --dim:#6b7280;
+      --line:#e6e6e3;
+      --accent:#cc5b1f;
+      --link:#6b5947;
+      --link-hover:#0066cc;
+      --sans:"Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono:"JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:720px;margin:0 auto;padding:72px 24px 96px}
+    .eyebrow{color:var(--dim);font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;margin-bottom:16px}
+    h1{font-size:clamp(1.7rem,2.6vw,2.2rem);line-height:1.25;margin:0 0 16px;letter-spacing:-.01em;font-weight:600}
+    .lead{font-size:1.1rem;color:var(--ink-soft);margin:0}
+    .byline{margin:16px 0 0;color:var(--dim);font-size:.82rem;font-family:var(--mono)}
+    .byline a{color:var(--link);text-decoration:underline;text-underline-offset:2px}
+    .byline a:hover{color:var(--link-hover)}
+    .list{margin-top:48px}
+    .listHead{color:var(--dim);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.7rem;margin-bottom:4px}
+    .item{display:block;text-decoration:none;color:inherit;padding:20px 0;border-bottom:1px solid var(--line)}
+    .item:first-of-type{border-top:1px solid var(--line)}
+    .itemTitle{font-size:1.12rem;font-weight:600;margin:0 0 6px;transition:color .15s ease}
+    .item:hover .itemTitle{color:var(--accent)}
+    .itemTitle .arrow{color:var(--dim);font-weight:400}
+    .itemDesc{color:var(--ink-soft);font-size:.95rem;margin:0}
+    .foot{margin-top:56px;color:var(--dim);font-size:.84rem}
+    .foot a{color:var(--link);text-decoration:underline}
+    .foot a:hover{color:var(--link-hover)}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="eyebrow">Interpretability explainers</div>
+    <h1>Small interactive guides to how language models work inside.</h1>
+    <p class="lead">Hand-built explainers on mechanistic interpretability: causal interventions, learned features, and how internal structure shapes what a model predicts next.</p>
+    <p class="byline">By <a href="https://www.linkedin.com/in/imran-khan37" target="_blank" rel="noopener">Imran Khan</a></p>
+
+    <section class="list">
+      <div class="listHead">Explainers</div>
+      <a class="item" href="activation-patching.html">
+        <p class="itemTitle">Patching &amp; Steering as Causal Analysis <span class="arrow">&rarr;</span></p>
+        <p class="itemDesc">An interactive walk through activation patching and steering as causal interventions, worked through an IOI-style example with feature-level patches.</p>
+      </a>
+    </section>
+
+    <p class="foot">Source on <a href="https://github.com/imrankhan37/interpretability-explainers">GitHub</a>.</p>
+  </main>
+</body>
+</html>
