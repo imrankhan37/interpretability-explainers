@@ -445,12 +445,7 @@
 
     <section class="finalNote">
       <h2>Takeaway</h2>
-      <p><strong>Patching and steering are both causal tools</strong> because they intervene on the model’s internal computation and measure the downstream change. Patching chooses the intervention from a real counterfactual run; steering chooses a direction and a dose.</p>
-      <ul>
-        <li><strong>John-only patch:</strong> adds John evidence, but Mary evidence remains.</li>
-        <li><strong>Mary + John patch:</strong> subtracts Mary evidence and adds John evidence, so the base run becomes target-like in just those selected coordinates.</li>
-        <li><strong>Real models:</strong> the feature directions are not usually perfect 2D axes; this diagram is the clean mental model.</li>
-      </ul>
+      <p><strong>Patching and steering are both causal tools</strong> because they intervene on the model’s internal computation and measure the downstream change. Patching chooses the intervention from a real counterfactual run; steering chooses a direction and a dose. The two-axis diagram here is a clean mental model: in a real model the feature directions are not usually perfect 2D axes, though the causal logic is the same.</p>
       <p>The idea underneath both is simple: observation only tells you a feature is <em>present</em>, while an intervention tells you whether changing that feature <em>changes the answer</em>. That distinction is the whole reason to do this. Black-box testing tells you a behaviour happened. A causal intervention tells you which internal feature produced it, and whether that feature is load-bearing or just happened to be present when the answer came out.</p>
       <p>That is what you need to debug a surprising output, to confirm a fix changed the mechanism and not only the surface text, or to explain a model’s behaviour to someone who was not in the room. Steering then turns the same handle into control: once a direction is known to carry a behaviour, you can push on it at inference time without retraining.</p>
       <p class="sourceNote">An interactive companion to a worked example on feature-level activation patching, using the John / Mary IOI-style prompt pair. Built by Imran Khan · <a href="https://github.com/imrankhan37/interpretability-explainers">github.com/imrankhan37/interpretability-explainers</a></p>
